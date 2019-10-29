@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Quobject.SocketIoClientDotNet.Client;
 
 namespace Streamate
 {
@@ -15,6 +9,43 @@ namespace Streamate
         public Menu()
         {
             InitializeComponent();
+            ConnectToSocketIO();
+
+            //MessageBox.Show("Streamate is on ACTIVE DEVELOPMENT!");
+        }
+
+        private void ConnectToSocketIO()
+        {
+            var socket = IO.Socket("http://localhost:8080");
+            socket.On(Socket.EVENT_CONNECT, () =>
+            {
+                //checkBox1.Text = "ONLINE";
+                //Console.WriteLine("Default 'Connect' event called!");
+
+                //ConnectInfo conInfo = new ConnectInfo("input", "123");
+                //string dataToServer = JsonConvert.SerializeObject(conInfo);
+                //socket.Emit("session", dataToServer);
+            });
+
+            socket.On("welcome", (data) =>
+            {
+                Console.WriteLine("Welcome! Token: " + data.ToString() );
+            });
+
+            socket.On("play", (data) =>
+            {
+                Console.WriteLine("Welcome! Token: " + data.ToString());
+            });
+
+            socket.On(Socket.EVENT_RECONNECT, () =>
+            {
+                Console.WriteLine("Default 'Reconnect' event called!");
+            });
+
+            socket.On(Socket.EVENT_DISCONNECT, () =>
+            {
+                Console.WriteLine("Default 'Disconnect' event called!");
+            });
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
