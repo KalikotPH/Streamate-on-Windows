@@ -6,12 +6,32 @@ namespace Streamate
 {
     public partial class Menu : Form
     {
+        public int getInterval
+        {
+            get
+            {
+                return System.Convert.ToInt32(this.intervals) * 1000;
+            }
+        }
+
+        public string[] getUrls
+        {
+            get
+            {
+                string[] test = new string[] {
+                     "https://businext.dev/cron"
+                };
+                return test;
+            }
+        }
+
         public Menu()
         {
             InitializeComponent();
             ConnectToSocketIO();
 
             //MessageBox.Show("Streamate is on ACTIVE DEVELOPMENT!");
+            Cron.Init(this);
         }
 
         private void ConnectToSocketIO()

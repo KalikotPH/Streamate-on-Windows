@@ -44,6 +44,9 @@
             this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.urlLists = new System.Windows.Forms.RichTextBox();
+            this.intervals = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,6 +158,32 @@
             this.checkBox1.Text = "Online";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // urlLists
+            // 
+            this.urlLists.Location = new System.Drawing.Point(243, 12);
+            this.urlLists.Name = "urlLists";
+            this.urlLists.Size = new System.Drawing.Size(278, 360);
+            this.urlLists.TabIndex = 2;
+            this.urlLists.Text = "sadsad";
+            // 
+            // intervals
+            // 
+            this.intervals.Location = new System.Drawing.Point(62, 169);
+            this.intervals.Name = "intervals";
+            this.intervals.Size = new System.Drawing.Size(100, 20);
+            this.intervals.TabIndex = 3;
+            this.intervals.Text = "1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(59, 153);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Seconds";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,13 +191,16 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(533, 384);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.intervals);
+            this.Controls.Add(this.urlLists);
             this.Controls.Add(this.checkBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " Streamate by Bytes Crafter";
+            this.Text = "Cron App by BytesCrafter";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.contextMenuStrip1.ResumeLayout(false);
@@ -193,6 +225,9 @@
         private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem streamateToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RichTextBox urlLists;
+        private System.Windows.Forms.TextBox intervals;
+        private System.Windows.Forms.Label label1;
     }
 }
 
