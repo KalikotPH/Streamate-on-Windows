@@ -47,6 +47,7 @@
             this.urlLists = new System.Windows.Forms.RichTextBox();
             this.intervals = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,29 +161,42 @@
             // 
             // urlLists
             // 
-            this.urlLists.Location = new System.Drawing.Point(243, 12);
+            this.urlLists.Location = new System.Drawing.Point(38, 269);
             this.urlLists.Name = "urlLists";
-            this.urlLists.Size = new System.Drawing.Size(278, 360);
+            this.urlLists.Size = new System.Drawing.Size(278, 103);
             this.urlLists.TabIndex = 2;
             this.urlLists.Text = "sadsad";
+            this.urlLists.Visible = false;
             // 
             // intervals
             // 
-            this.intervals.Location = new System.Drawing.Point(62, 169);
+            this.intervals.Location = new System.Drawing.Point(342, 317);
             this.intervals.Name = "intervals";
             this.intervals.Size = new System.Drawing.Size(100, 20);
             this.intervals.TabIndex = 3;
             this.intervals.Text = "1";
+            this.intervals.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(59, 153);
+            this.label1.Location = new System.Drawing.Point(339, 301);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Seconds";
+            this.label1.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(190, 147);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 51);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "FORCE CRON";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Menu
             // 
@@ -191,6 +205,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(533, 384);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.intervals);
             this.Controls.Add(this.urlLists);
@@ -228,6 +243,7 @@
         private System.Windows.Forms.RichTextBox urlLists;
         private System.Windows.Forms.TextBox intervals;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

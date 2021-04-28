@@ -135,5 +135,10 @@ namespace Streamate
                 //Instead of exiting when close button on form is clicked!
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cron.SumPageSizesAsync(false);
+        }
     }
 }

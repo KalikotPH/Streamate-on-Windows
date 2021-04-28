@@ -25,7 +25,7 @@ namespace Streamate
             SumPageSizesAsync();
         }
 
-        public static async Task SumPageSizesAsync()
+        public static async Task SumPageSizesAsync(bool recur = true)
         {
             s_urlList = curForm.getUrls;
 
@@ -53,8 +53,11 @@ namespace Streamate
 
             //Console.WriteLine("Total bytes returned:  "+ curForm.getInterval);
             //await Task.Delay(curForm.getInterval);
-            await Task.Delay(10000);
-            SumPageSizesAsync();
+            if(recur)
+            {
+                await Task.Delay(60000);
+                SumPageSizesAsync();
+            }
         }
 
         static async Task<int> ProcessUrlAsync(string url, HttpClient client)
